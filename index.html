@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG1 Consulting | Built For Daria</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Built for Daria Nazarova (@msdariia), by AG1 Consulting">
+<meta property="og:description" content="Your first productized creator offer and the funnel to sell it, designed for the Dubai / MENA UGC market.">
+<meta property="og:url" content="https://andrei170.github.io/msdariia-hub/">
+<meta property="og:image" content="https://andrei170.github.io/msdariia-hub/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Built for Daria Nazarova (@msdariia), by AG1 Consulting">
+<meta name="twitter:description" content="Your first productized creator offer and the funnel to sell it, designed for the Dubai / MENA UGC market.">
+<meta name="twitter:image" content="https://andrei170.github.io/msdariia-hub/og-image.png">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;✨&lt;/text&gt;&lt;/svg&gt;">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --black: #000000; --surface: #0A0A0F;
+    --gold-1: #D4A84B; --gold-2: #B8922E; --gold-flat: #C9973A;
+    --white: #FFFFFF; --muted: #9A9AA5; --border: rgba(255,255,255,0.10);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter','Open Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  .gold-text { background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+  nav { position: sticky; top: 0; z-index: 50; background: rgba(0,0,0,0.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; max-width: 1080px; margin: 0 auto; }
+  .wordmark { font-weight: 800; font-size: 1.3rem; letter-spacing: 0.5px; }
+  .wordmark .ag { background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .wordmark .co { color: var(--white); font-weight: 800; }
+  .nav-cta { font-size: 0.82rem; font-weight: 700; text-decoration: none; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); padding: 9px 18px; border-radius: 40px; white-space: nowrap; }
+  header.hero { padding: 90px 0 70px; text-align: center; position: relative; background: radial-gradient(circle at 50% 0%, rgba(201,151,58,0.10), transparent 55%); }
+  .badge { display: inline-block; font-size: 0.74rem; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--gold-flat); border: 1px solid rgba(201,151,58,0.4); border-radius: 40px; padding: 8px 18px; margin-bottom: 30px; }
+  .brand-row { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
+  .brand-block { font-weight: 800; font-size: 1.8rem; letter-spacing: 0.5px; }
+  .brand-x { color: var(--muted); font-size: 1.4rem; font-weight: 400; }
+  header.hero h1 { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 800; line-height: 1.12; margin-bottom: 20px; }
+  header.hero p.sub { color: var(--muted); font-size: 1.1rem; max-width: 640px; margin: 0 auto; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 34px 18px; margin: 50px 0; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+  .stat { text-align: center; }
+  .stat .num { font-size: clamp(1.8rem, 5vw, 2.6rem); font-weight: 800; line-height: 1; }
+  .stat .label { font-size: 0.82rem; color: var(--muted); margin-top: 10px; letter-spacing: 0.4px; }
+  .sec-head { text-align: center; margin: 70px 0 36px; }
+  .sec-head .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold-flat); }
+  .sec-head h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); font-weight: 800; margin-top: 12px; }
+  .acc { display: flex; flex-direction: column; gap: 16px; }
+  .card { background: rgba(10,10,15,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.45); }
+  .acc-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; }
+  .acc-head .left { display: flex; align-items: center; gap: 16px; }
+  .acc-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); }
+  .acc-head h3 { font-size: 1.08rem; font-weight: 800; }
+  .acc-icon { flex-shrink: 0; color: var(--gold-flat); font-size: 1.5rem; transition: transform 0.35s ease; line-height: 1; }
+  .card.open .acc-icon { transform: rotate(45deg); }
+  .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.45s ease; }
+  .acc-inner { padding: 0 24px 26px; color: #D7D7DE; }
+  .acc-inner p { margin-bottom: 14px; }
+  .acc-inner p:last-child { margin-bottom: 0; }
+  .acc-inner strong { color: var(--white); }
+  .acc-inner .gold-label { color: var(--gold-flat); font-weight: 700; }
+  .item { border-left: 2px solid rgba(201,151,58,0.45); padding: 4px 0 4px 16px; margin-bottom: 18px; }
+  .item:last-child { margin-bottom: 0; }
+  .item .name { font-weight: 800; color: var(--white); display: block; margin-bottom: 4px; }
+  .item .hl { color: #C7C7D0; font-style: italic; }
+  .pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--gold-flat); border: 1px solid rgba(201,151,58,0.4); border-radius: 30px; padding: 4px 12px; margin-bottom: 8px; }
+  .stack-list { list-style: none; }
+  .stack-list li { padding: 7px 0 7px 26px; position: relative; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .stack-list li:last-child { border-bottom: none; }
+  .stack-list li::before { content: "+"; position: absolute; left: 0; color: var(--gold-flat); font-weight: 800; }
+  .btn-link { display: inline-block; margin-top: 16px; text-decoration: none; font-weight: 700; font-size: 0.92rem; color: var(--black); background: linear-gradient(135deg, var(--gold-1), var(--gold-2)); padding: 13px 26px; border-radius: 40px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .btn-link:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,151,58,0.3); }
+  .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .model{background:rgba(10,10,15,0.7);border:1px solid var(--border);border-radius:14px;padding:24px 22px;}
+  .model .ic{color:var(--gold-flat);font-weight:800;font-size:0.74rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:block;}
+  .model h4{font-size:1rem;font-weight:800;margin-bottom:8px;color:var(--white);}
+  .model p{color:var(--muted);font-size:0.92rem;margin:0;}
+  .scarcity{text-align:center;color:var(--gold-flat);font-weight:700;font-size:0.95rem;margin:28px auto 0;max-width:620px;}
+  .hub-faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+  .hub-faq .qa{background:rgba(10,10,15,0.6);border:1px solid var(--border);border-radius:12px;padding:20px 22px;}
+  .hub-faq .qa h4{font-size:1rem;font-weight:800;color:var(--white);margin-bottom:6px;}
+  .hub-faq .qa p{color:var(--muted);font-size:0.93rem;margin:0;}
+  .sticky-cta{display:none;}
+  .process-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .proc { background: rgba(10,10,15,0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: 16px; padding: 26px 24px; box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+  .proc .step { font-size: 0.78rem; font-weight: 800; letter-spacing: 1px; color: var(--gold-flat); margin-bottom: 12px; }
+  .proc h4 { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+  .proc p { color: var(--muted); font-size: 0.95rem; }
+  .cta-box { text-align: center; margin: 80px 0 60px; padding: 60px 30px; background: var(--surface); border: 1px solid rgba(201,151,58,0.25); border-radius: 22px; background-image: radial-gradient(circle at 50% 0%, rgba(201,151,58,0.12), transparent 60%); box-shadow: 0 24px 70px rgba(0,0,0,0.55); }
+  .cta-box h2 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+  .cta-box p { color: var(--muted); max-width: 560px; margin: 0 auto 30px; font-size: 1.08rem; }
+  .cta-box .btn-link { font-size: 1.05rem; padding: 16px 38px; margin-top: 0; }
+  footer { text-align: center; padding: 40px 0 60px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--border); }
+  footer .wordmark { font-size: 1.05rem; margin-bottom: 8px; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (max-width:720px){
+    .model-grid{grid-template-columns:1fr;}
+    body{padding-bottom:74px;}
+    .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(0,0,0,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--border);padding:12px 16px;}
+    .sticky-cta a{display:block;width:100%;text-align:center;color:var(--black);background:linear-gradient(135deg,var(--gold-1),var(--gold-2));font-weight:700;padding:14px;border-radius:40px;text-decoration:none;font-size:0.95rem;}
+  }
+  @media (max-width: 720px) { .stats { grid-template-columns: 1fr; gap: 24px; padding: 30px 18px; } .process-grid { grid-template-columns: 1fr; } .nav-cta { display: none; } header.hero { padding: 64px 0 50px; } .brand-block { font-size: 1.4rem; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="wordmark"><span class="ag">AG1</span> <span class="co">CONSULTING</span></div>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge reveal">Built Exclusively For Daria</span>
+    <div class="brand-row reveal">
+      <div class="brand-block"><span class="gold-text">AG1</span> <span style="color:var(--white)">CONSULTING</span></div>
+      <span class="brand-x">for</span>
+      <div class="brand-block" style="color:var(--white)">THE DUBAI UGC CREATOR BLUEPRINT</div>
+    </div>
+    <h1 class="reveal">Your First Productized Creator Offer And The Funnel To Sell It,<br><span class="gold-text">Built For Your Business</span></h1>
+    <p class="sub reveal">A productized creator-education playbook, a sales page, and a 5-email nurture that turns your editor authority and brand-collab credibility into a real product the MENA creator market actually buys.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="stats reveal">
+    <div class="stat"><div class="num"><span data-count="6">0</span>+</div><div class="label">Hours of Research</div></div>
+    <div class="stat"><div class="num"><span data-count="7">0</span></div><div class="label">Custom Deliverables</div></div>
+    <div class="stat"><div class="num"><span data-count="2">0</span></div><div class="label">Live Pages</div></div>
+  </div>
+
+  <div class="sec-head reveal">
+    <div class="eyebrow">The Work</div>
+    <h2>Everything We Built For You</h2>
+  </div>
+
+  <div class="acc">
+
+    <!-- 1 RESEARCH -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">1</div><h3>Research Snapshot</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p><span class="gold-label">Editor authority + brand list = real.</span> You are Editor-in-Chief at @dubai_pike (~69K, Fresh Urban Media). Your UGC work has run alongside Sephora, Elemis, Pearlville Cosmetics, Gemaee, and S.E.Y. Active (self-reported across the Grynow nano-creator database and your own LinkedIn portfolio). Your IG sits at 2.75% engagement on a 4.2K base, which is healthy for the nano tier.</p>
+        <p><span class="gold-label">Zero productization is the gap.</span> Your entire income today is per-gig: brand UGC paid per-deliverable plus the editor role. There is no opt-in, no lead magnet, no email list, no link-in-bio, no Stan or Beacons, no personal sales page, no course, no discovery-call link. Your IG bio CTA captures brand-side intake only and ignores the creators inside your audience who would buy a paid product from you.</p>
+        <p><span class="gold-label">Audience-size + distribution honesty.</span> 4.2K IG is below the comfortable organic-only product-launch floor. The build assumes paid social plus @dubai_pike editor cross-promo as the distribution levers, not organic-only. That is the wedge: productize the playbook, wire the funnel, drive traffic through paid + editor cross-channel.</p>
+      </div></div>
+    </div>
+
+    <!-- 2 THE OFFER -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">2</div><h3>Your First Productized Offer: The Dubai UGC Creator Blueprint</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>A productized digital playbook for aspiring UGC creators in Dubai and across MENA who want to land their first paid brand collabs and build a real creator business instead of chasing one-off gigs.</p>
+        <p><span class="gold-label">The promise (educator-framed):</span> the same positioning, pitching, rate-card, and delivery system you use as a Dubai PIKE editor and UGC creator, packaged so an aspiring creator can land their first paid brand collab inside 30 days.</p>
+        <p><span class="gold-label">The mechanism: The Dubai Creator Blueprint Method</span></p>
+        <p>1. Position For Brands That Pay<br>2. Pitch Like An Editor<br>3. Price &amp; Deliver</p>
+        <p><span class="gold-label">Inside the Blueprint:</span></p>
+        <ul class="stack-list">
+          <li>The Positioning Workbook (niche, bio, grid audit, editorial-voice teach)</li>
+          <li>The Pitch Pack (3 cold templates + 1 warm template + lightweight pitch deck)</li>
+          <li>The Rate Sheet Builder (AED + USD tiers, deliverable bundles, usage-rights add-ons)</li>
+          <li>The Contract + Brief Templates (creator-side contract, brand brief intake, delivery checklist)</li>
+          <li>The Repeat-Client Playbook (post-delivery follow-up, retainer pitch, upsell paths)</li>
+          <li>A short walkthrough video series narrated by you</li>
+        </ul>
+        <p style="margin-top:14px;"><span class="gold-label">Tier hint:</span> standalone Blueprint sits in the low-three-figure AED range as a digital download. Blueprint + Coaching tier (Blueprint plus 4 office-hour calls with you over 8 weeks) sits in the lower four figures AED. Self-serve checkout on Stan Store or Shopify Lite. Both tiers earn beyond your gig hours.</p>
+      </div></div>
+    </div>
+
+    <!-- 3 NURTURE -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">3</div><h3>The Nurture Sequence (5 emails)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>Written in your voice (soft-luxe editorial girl-boss), sent after the free Blueprint Starter Guide opt-in, warming an opt-in into a Blueprint buyer.</p>
+        <div class="item"><span class="name">1. Deliver the Starter Guide</span><span class="hl">The "pitch like an editor, not a follower" reframe.</span></div>
+        <div class="item"><span class="name">2. Your Dubai journey</span><span class="hl">One suitcase, no network, built it. Transformation narrative.</span></div>
+        <div class="item"><span class="name">3. The editor lesson</span><span class="hl">What a PIKE brand brief actually looks like from inside.</span></div>
+        <div class="item"><span class="name">4. The Blueprint offer</span><span class="hl">What is inside, the tier, why this not a coaching program.</span></div>
+        <div class="item"><span class="name">5. Last call + fit-call CTA</span><span class="hl">Blueprint + Coaching tier route for creators who want you direct.</span></div>
+      </div></div>
+    </div>
+
+    <!-- 4 ANGLES -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">4</div><h3>Campaign Angles (5)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <div class="item"><span class="name">1. The Dubai Editor's Playbook</span><span class="hl">"I edit a 69K Dubai media outlet. Here is how I land beauty-brand collabs as a 4K creator, and how you can too."</span></div>
+        <div class="item"><span class="name">2. From Zero To First Paid Brand Collab In 30 Days</span><span class="hl">"Inside the Dubai Creator Blueprint: the positioning, pitch, and rate sheet."</span></div>
+        <div class="item"><span class="name">3. Pitch Like An Editor, Get Paid Like One</span><span class="hl">"Brands ignore your pitch because it reads like a follower."</span></div>
+        <div class="item"><span class="name">4. The MENA Creator Economy Is Wide Open</span><span class="hl">"Sephora, Elemis, and Gemaee already pay creators in Dubai. Nobody is teaching nano creators how to get into the pool."</span></div>
+        <div class="item"><span class="name">5. The Rate Sheet I Wish I Had Two Years Ago</span><span class="hl">"If you do not have a rate sheet, you are leaving AED on the table every time."</span></div>
+      </div></div>
+    </div>
+
+    <!-- 5 LANDING -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">5</div><h3>Sales Page Preview</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>A full <strong>Dubai UGC Creator Blueprint</strong> sales page in a cream + charcoal + warm-gold editorial brand. It opens on the "pitching like a follower" pain, walks through the three-pillar method, lays out everything inside the Blueprint, leads with your editor role + brand-list credibility (carefully framed as "creators she has worked alongside"), and drives to a fit-call CTA. Compliance disclaimer baked in.</p>
+        <p>It is live and ready to view right now.</p>
+        <a href="https://andrei170.github.io/msdariia-landing/" class="btn-link" target="_blank" rel="noopener">View the live sales page</a>
+      </div></div>
+    </div>
+
+    <!-- 6 COMPLIANCE -->
+    <div class="card reveal">
+      <div class="acc-head"><div class="left"><div class="acc-num">6</div><h3>Compliance Notes (Creator Brand + Editor Role)</h3></div><span class="acc-icon">+</span></div>
+      <div class="acc-body"><div class="acc-inner">
+        <p>Your authority is real and earned, but the build stays careful about how it gets cited. Everything we ship has these guardrails:</p>
+        <ul class="stack-list">
+          <li>Brand-collab references framed as "creators she has worked alongside" - never "endorsed by" or "official partner of"</li>
+          <li>The personal Dubai-relocation revenue figure is NOT quoted anywhere in cold copy - used only as transformation narrative</li>
+          <li>Your @dubai_pike role cited accurately as "Editor-in-Chief at @dubai_pike (Fresh Urban Media, ~69K)" - editor, not owner</li>
+          <li>"Education product. Individual results vary based on niche, effort, and market timing" disclaimer on landing + footer + FAQ</li>
+          <li>Audience-size honesty: 4K IG is not the proof; the proof is the editor role + brand list + method</li>
+          <li>Distribution recommendation: paid social + @dubai_pike editor cross-promo as the launch levers, not organic-only</li>
+        </ul>
+        <p style="margin-top:14px;">Keeps your editor credibility intact while letting you sell the Blueprint confidently to the MENA creator market.</p>
+      </div></div>
+    </div>
+
+  </div>
+
+  <!-- PROCESS -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">How We Work</div>
+    <h2>Done For You. One Operator.</h2>
+  </div>
+
+  <div class="process-grid">
+    <div class="proc reveal"><div class="step">STEP 01</div><h4>We Productize The Blueprint</h4><p>The Positioning Workbook, the Pitch Pack, the Rate Sheet Builder, the Contract templates, the Repeat-Client Playbook, the walkthrough videos, all in your editorial voice.</p></div>
+    <div class="proc reveal"><div class="step">STEP 02</div><h4>We Wire The Opt-In + Nurture</h4><p>AED-currency checkout (Stan Store or Shopify Lite), connected to a new or existing email list. The 5-email sequence runs on autopilot from opt-in to Blueprint buyer.</p></div>
+    <div class="proc reveal"><div class="step">STEP 03</div><h4>We Distribute Via @dubai_pike + Paid</h4><p>One editor-byline cross-promo through PIKE per launch window plus a low-budget MENA paid-social stack. The 4K base is amplified, not relied on.</p></div>
+    <div class="proc reveal"><div class="step">STEP 04</div><h4>You Mentor, We Run The Machine</h4><p>You keep editing PIKE and creating. The funnel keeps converting it, without you touching the tech.</p></div>
+  </div>
+
+  <!-- HOW WE'D WORK -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">How We'd Work</div>
+    <h2>Simple Terms. Skin In The Game.</h2>
+  </div>
+  <div class="model-grid">
+    <div class="model reveal"><span class="ic">The model</span><h4>A setup fee, then revenue share</h4><p>A one-time build fee to stand it all up, then a share of the new revenue it generates. I only win when you win.</p></div>
+    <div class="model reveal"><span class="ic">One operator</span><h4>You deal with me, not a team</h4><p>I build and run the whole machine myself with AI leverage. One point of contact, fast turnaround, nothing lost in handoffs.</p></div>
+    <div class="model reveal"><span class="ic">Proven</span><h4>Over $1M generated, solo</h4><p>I built a full monetization system from zero for a creator with 180K followers: offer, funnel, email, and community, in weeks.</p></div>
+  </div>
+  <p class="scarcity reveal">I only take on a handful of clients at a time, so I can stay hands-on with every build.</p>
+
+  <!-- HUB FAQ -->
+  <div class="sec-head reveal">
+    <div class="eyebrow">Straight Answers</div>
+    <h2>What You're Probably Wondering</h2>
+  </div>
+  <div class="hub-faq">
+    <div class="qa reveal"><h4>How much does this cost?</h4><p>A setup fee plus revenue share, scoped to what we build. We talk real numbers on the call, once I understand your business. No retainer, no surprises.</p></div>
+    <div class="qa reveal"><h4>How fast can you build it?</h4><p>Fast. These pages were built before we ever spoke. The Blueprint, checkout, and nurture are usually live in a few weeks.</p></div>
+    <div class="qa reveal"><h4>What do you need from me?</h4><p>Your voice, your method, and a green light to cross-promote one editor byline through @dubai_pike. I handle the build, tech, copy, design, and paid-social setup. You stay focused on PIKE and your creator content.</p></div>
+    <div class="qa reveal"><h4>Why revenue share?</h4><p>Because it aligns us. I do not earn the upside unless the Blueprint actually sells. My incentive is your result.</p></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box reveal">
+    <h2>Ready to build this for real?</h2>
+    <p>Everything above was built specifically for you, Daria. Imagine the Blueprint, the checkout, and the nurture wired into your editor cross-promo and a small paid layer.</p>
+    <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn-link" target="_blank" rel="noopener">Book a call with Andrei</a>
+    <p style="color:var(--muted);font-size:0.92rem;margin:14px auto 0;text-align:center;">Not ready for a call? Just reply and tell me what you think.</p>
+    <p style="color:var(--gold-flat);font-weight:700;font-size:0.9rem;margin:14px auto 0;text-align:center;letter-spacing:.02em;">Over $1M in client revenue generated. One operator.</p>
+  </div>
+
+</div>
+
+<div class="sticky-cta"><a href="https://calendly.com/ag-copy/call-with-andrei">Book a call with Andrei</a></div>
+
+<footer>
+  <div class="wordmark"><span class="ag gold-text">AG1</span> <span class="co">CONSULTING</span></div>
+  <div>High-ticket offers and marketing systems, done for you.</div>
+  <div style="margin-top:14px;"><a href="https://andrei170.github.io/ag1/" target="_blank" rel="noopener" style="color:var(--gold-flat);text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:.02em;">andrei170.github.io/ag1</a></div>
+</footer>
+
+<script>
+  document.querySelectorAll('.acc-head').forEach(function(h){
+    h.addEventListener('click', function(){
+      var card = h.parentElement;
+      var body = card.querySelector('.acc-body');
+      var isOpen = card.classList.contains('open');
+      if (isOpen) { body.style.maxHeight = null; card.classList.remove('open'); }
+      else { card.classList.add('open'); body.style.maxHeight = body.scrollHeight + 'px'; }
+    });
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  function runCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var start = null, dur = 1100;
+    function step(ts){ if (!start) start = ts; var p = Math.min((ts - start) / dur, 1); el.textContent = Math.floor(p * target); if (p < 1) requestAnimationFrame(step); else el.textContent = target; }
+    requestAnimationFrame(step);
+  }
+  var countObserved = false;
+  var statObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting && !countObserved){ countObserved = true; document.querySelectorAll('[data-count]').forEach(runCount); } });
+  }, { threshold: 0.4 });
+  var statsEl = document.querySelector('.stats');
+  if (statsEl) statObserver.observe(statsEl);
+</script>
+</body>
+</html>
