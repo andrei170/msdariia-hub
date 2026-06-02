@@ -19,11 +19,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1A1A1A; --ink-2:#2A2520;
-    --cream:#FAF6F1; --cream-2:#F2EBE0; --paper:#FFFDFA;
-    --blush:#E8C9C0; --rose:#C9837A; --rose-dark:#A8625A;
-    --gold:#C9A961; --gold-bright:#D8BA7A;
-    --muted:#6E6256; --soft:#8A7F70; --line:#E6DCC8;
+    --ink:#15110D; --ink-2:#2A241D;
+    --cream:#F7F2EB; --cream-2:#EEE6D9; --paper:#FBF6EE;
+    --whisper:#EFE3D5; --paper-3:#E4D9C6;
+    --gold:#B89863; --gold-deep:#8A6F3F; --gold-bright:#D8BA7A; --gold-pale:#E1CFA9;
+    --muted:#7A6F5E; --soft:#9B8E78; --line:#D6C6A8;
+    /* legacy aliases - now point to gold tones for editorial Dubai-luxe aesthetic */
+    --blush:var(--whisper); --rose:var(--gold); --rose-dark:var(--gold-deep);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -36,17 +38,17 @@
   a{text-decoration:none;color:inherit;}
   strong{color:var(--ink);font-weight:600;}
   .wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 24px;}
-  .it{font-style:italic;color:var(--rose-dark);}
-  .gold-text{color:var(--rose-dark);font-style:italic;}
+  .it{font-style:italic;color:var(--gold-deep);}
+  .gold-text{color:var(--gold-deep);font-style:italic;}
 
   /* progress bar */
-  .progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--rose));z-index:100;transition:width .1s linear;}
+  .progress{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--gold-deep),var(--gold));z-index:100;transition:width .1s linear;}
 
   /* nav */
   nav{position:sticky;top:0;z-index:60;background:rgba(250,246,241,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;max-width:1080px;margin:0 auto;padding:0 24px;}
   .wordmark{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;letter-spacing:.01em;}
-  .wordmark .ag{font-style:italic;color:var(--rose-dark);}
+  .wordmark .ag{font-style:italic;color:var(--gold-deep);}
   .wordmark .co{color:var(--ink);letter-spacing:.12em;font-size:.92rem;text-transform:uppercase;font-style:normal;font-weight:600;}
   .btn{display:inline-block;background:var(--ink);color:var(--cream);font-weight:600;font-size:1.02rem;padding:15px 32px;border-radius:50px;cursor:pointer;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;box-shadow:0 8px 22px rgba(26,26,26,.18);}
   .btn:hover{background:#000;transform:translateY(-2px);box-shadow:0 12px 28px rgba(26,26,26,.28);}
@@ -54,8 +56,8 @@
   .nav-cta{white-space:nowrap;}
 
   /* hero */
-  header.hero{background:linear-gradient(180deg,var(--blush) 0%,var(--cream) 78%);padding:64px 0 76px;text-align:center;border-bottom:1px solid var(--line);position:relative;}
-  .dateline{display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.68rem;font-weight:700;color:var(--rose-dark);margin-bottom:30px;}
+  header.hero{background:linear-gradient(180deg,var(--whisper) 0%,var(--cream) 78%);padding:74px 0 84px;text-align:center;border-bottom:1px solid var(--line);position:relative;}
+  .dateline{display:flex;align-items:center;justify-content:center;gap:14px;font-family:'Inter',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.68rem;font-weight:700;color:var(--gold-deep);margin-bottom:30px;}
   .dateline .ln{width:34px;height:1px;background:var(--rose);opacity:.5;}
   .brand-row{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:26px;}
   .brand-block{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.02em;}
@@ -70,7 +72,7 @@
   /* chapter heads */
   .sec-head{text-align:center;margin:64px 0 34px;}
   .chapter{font-family:'Fraunces',serif;font-style:italic;font-size:2.4rem;color:var(--gold);line-height:1;display:block;margin-bottom:6px;}
-  .sec-head .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-dark);}
+  .sec-head .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);}
   .sec-head h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-top:12px;}
 
   /* stats band */
@@ -83,20 +85,20 @@
   /* accordion */
   .acc{display:flex;flex-direction:column;gap:14px;max-width:880px;margin:0 auto;}
   .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(26,26,26,.05);transition:box-shadow .25s ease;}
-  .card.open{box-shadow:0 18px 44px rgba(201,131,122,.14);border-color:var(--blush);}
+  .card.open{box-shadow:0 18px 44px rgba(201,131,122,.14);border-color:var(--gold-pale);}
   .acc-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;cursor:pointer;user-select:none;}
   .acc-head .left{display:flex;align-items:center;gap:18px;}
   .acc-num{flex-shrink:0;font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:1.7rem;color:var(--gold);width:34px;text-align:center;}
   .acc-head h3{font-size:1.1rem;font-weight:600;}
   .acc-icon{flex-shrink:0;color:var(--gold);font-size:1.5rem;transition:transform .35s ease;line-height:1;font-weight:600;}
-  .card.open .acc-icon{transform:rotate(45deg);color:var(--rose-dark);}
+  .card.open .acc-icon{transform:rotate(45deg);color:var(--gold-deep);}
   .acc-body{max-height:0;overflow:hidden;transition:max-height .45s ease;}
   .acc-inner{padding:2px 28px 28px 78px;color:var(--muted);}
   .acc-inner p{margin-bottom:14px;}
   .acc-inner p:last-child{margin-bottom:0;}
   .acc-inner strong{color:var(--ink);}
-  .gold-label{color:var(--rose-dark);font-weight:600;font-style:italic;}
-  .item{border-left:2px solid var(--blush);padding:3px 0 3px 18px;margin-bottom:16px;}
+  .gold-label{color:var(--gold-deep);font-weight:600;font-style:italic;}
+  .item{border-left:2px solid var(--gold-pale);padding:3px 0 3px 18px;margin-bottom:16px;}
   .item:last-child{margin-bottom:0;}
   .item .name{font-weight:600;color:var(--ink);display:block;margin-bottom:3px;font-family:'Fraunces',serif;}
   .item .hl{color:var(--soft);font-style:italic;}
@@ -120,10 +122,10 @@
 
   .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto;}
   .model{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:28px 24px;box-shadow:0 10px 28px rgba(26,26,26,.05);}
-  .model .ic{color:var(--rose-dark);font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;display:block;}
+  .model .ic{color:var(--gold-deep);font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px;display:block;}
   .model h4{font-size:1.12rem;margin-bottom:8px;}
   .model p{color:var(--muted);font-size:.95rem;margin:0;}
-  .scarcity{text-align:center;color:var(--rose-dark);font-style:italic;font-family:'Fraunces',serif;font-size:1.12rem;margin:34px auto 0;max-width:640px;}
+  .scarcity{text-align:center;color:var(--gold-deep);font-style:italic;font-family:'Fraunces',serif;font-size:1.12rem;margin:34px auto 0;max-width:640px;}
 
   .hub-faq{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
   .hub-faq .qa{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:24px 26px;}
@@ -342,7 +344,7 @@
     <p>Everything above was built specifically for you, Daria. Imagine the Blueprint, the checkout, and the nurture wired into your editor cross-promo and a small paid layer.</p>
     <a href="https://calendly.com/ag-copy/call-with-andrei" class="btn" target="_blank" rel="noopener">Book a call with Andrei</a>
     <p style="color:var(--muted);font-size:.92rem;margin:18px auto 0;text-align:center;">Not ready for a call? Just reply and tell me what you think.</p>
-    <p style="color:var(--rose-dark);font-family:'Fraunces',serif;font-style:italic;font-size:1rem;margin:12px auto 0;text-align:center;">Over $1M in client revenue generated. One operator.</p>
+    <p style="color:var(--gold-deep);font-family:'Fraunces',serif;font-style:italic;font-size:1rem;margin:12px auto 0;text-align:center;">Over $1M in client revenue generated. One operator.</p>
   </div>
 
 </div>
